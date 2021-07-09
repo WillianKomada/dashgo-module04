@@ -43,7 +43,7 @@ const options = {
       "2021-03-23T00:00:00.000Z",
       "2021-03-24T00:00:00.000Z",
     ],
-  },
+  } as const,
   fill: {
     opacity: 0.3,
     type: "gradient",
