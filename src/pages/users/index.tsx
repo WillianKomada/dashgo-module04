@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Center,
   Checkbox,
   Flex,
   Heading,
