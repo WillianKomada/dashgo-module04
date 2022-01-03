@@ -19,11 +19,6 @@ export function Pagination() {
         <PaginationItem number={3} />
         <PaginationItem number={4} />
         <PaginationItem number={5} />
-        <PaginationItem number={6} />
-        <PaginationItem number={7} />
-        <PaginationItem number={8} />
-        <PaginationItem number={9} />
-        <PaginationItem number={10} />
       </Stack>
     </Stack>
   );
