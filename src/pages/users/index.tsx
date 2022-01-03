@@ -16,9 +16,10 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
+
 import { Header } from "../../components/Header";
+import { Sidebar } from "../../components/SideBar";
 import { Pagination } from "../../components/Pagination";
-import { Sidebar } from "../../components/SideBar/index";
 
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
