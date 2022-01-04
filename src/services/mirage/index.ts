@@ -1,4 +1,4 @@
-import { createServer, Factory, Model } from 'miragejs';
+import { createServer, Factory, Model, Response } from 'miragejs';
 import faker from 'faker';
 
 type User = {
@@ -28,14 +28,30 @@ export function makeServer() {
     },
 
     seeds(server) {
-      server.createList('user', 10); // O número representa a quantidade de registros que vão ser gerados automaticamente
+      server.createList('user', 200); // O número representa a quantidade de registros que vão ser gerados automaticamente
     },
     
     routes() {
       this.namespace = 'api'; // Definindo namespace
       this.timing = 750; // Aplicando um delay na requisição
 
-      this.get('/users');
+      this.get('/users', function (schema, request) {
+        const { page = 1, per_page = 10 } = request.queryParams;
+
+        const total = schema.all('user').length;
+
+        const pageStart = (Number(page) - 1) * Number(per_page);
+        const pageEnd = pageStart + Number(per_page);
+
+        const users = this.serialize(schema.all('user'))
+          .users.slice(pageStart, pageEnd);
+
+        return new Response(
+          200,
+          { 'x-total-count': String(total) },
+          { users }
+        );
+      });
       this.post('/users');
 
       this.namespace = ''; // Resetando namespace para evitar conflito com next.js
