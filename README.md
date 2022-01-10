@@ -8,7 +8,7 @@
 ## 📝 Sobre
 
 <p>
-  Nesse módulo...
+  Nesse módulo criamos uma interface de um painel administrativo contendo fluxo de autenticação, dashboard, listagem e cadastro de usuários usando Chakra-UI no Next.js. Foi desenvolvido funcionalidade como formulários com react-hook-form e validações com yup, gráficos com apexcharts, banco de dados com dados fictícios usando MirageJS e library Faker, e library React-Query explorando a funcionalidade cache. Além das bibliotecas criamos lógica de paginação, links ativos, responsividade no app com Chakra-UI, e conceitos de Controlled Components, Uncontrolled Components, programação imperativa e programação declarativa. 🛸👽
 </p>
 
 ---
