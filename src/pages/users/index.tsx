@@ -158,11 +158,11 @@ export default function UserList({ users }) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const { users, totalCount } = await getUsers(1); // Seta apenas a primeira página de User um carregamento de SSR
+  // const { users, totalCount } = await getUsers(1); // Seta apenas a primeira página de User um carregamento de SSR
 
   return {
     props: {
-      users,
+      // users,
     },
   };
 };
